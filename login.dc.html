@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Login</title>
+<script src="./_runtime/react.js"></script>
+<script src="./_runtime/react-dom.js"></script>
+<script src="./_runtime/support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600&amp;family=Inter:wght@400;500;600&amp;display=swap">
+<style>
+body{margin:0;font-family:'Inter',sans-serif;background:#070B14;color:#F5F7FA}
+a{color:#5EEAD4;text-decoration:none}
+a:hover{text-decoration:underline}
+input{font-family:'Inter',sans-serif}
+input::placeholder{color:#6B7280}
+input:focus{outline:2px solid #5EEAD4;outline-offset:1px}
+button:hover{opacity:.92}
+</style>
+</helmet>
+<div style="position:relative;min-height:100vh;width:100%;overflow:hidden">
+  <svg aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+        <path d="M48 0H0V48" fill="none" stroke="#2DD4BF" stroke-opacity="0.12" stroke-width="1"></path>
+        <circle cx="0" cy="0" r="2" fill="#2DD4BF" fill-opacity="0.22"></circle>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)"></rect>
+  </svg>
+  <div style="position:relative;min-height:100vh;width:100%;display:flex;align-items:center;justify-content:center;padding:24px;box-sizing:border-box">
+    <div style="width:100%;max-width:380px;background:rgba(17,24,39,0.72);backdrop-filter:blur(20px);border:1px solid rgba(45,212,191,0.25);border-radius:20px;padding:40px 36px;box-shadow:0 0 60px rgba(45,212,191,0.07),0 20px 50px rgba(0,0,0,0.5);box-sizing:border-box">
+      <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#5EEAD4" stroke-width="1.8" style="display:block;margin-bottom:16px">
+        <rect x="4" y="11" width="16" height="9" rx="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+      </svg>
+      <h1 style="margin:0 0 6px;font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:600;color:#F5F7FA">Welcome back</h1>
+      <p style="margin:0 0 28px;font-size:14px;color:#9CA3AF">Sign in to continue to your account</p>
+      <form style="display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <label for="email" style="font-size:13px;font-weight:500;color:#D1D5DB">Email</label>
+          <input id="email" type="email" placeholder="you@example.com" style="height:44px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);color:#F5F7FA;padding:0 14px;font-size:14px;box-sizing:border-box">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <label for="password" style="font-size:13px;font-weight:500;color:#D1D5DB">Password</label>
+            <a href="#" style="font-size:12px">Forgot?</a>
+          </div>
+          <input id="password" type="password" placeholder="••••••••" style="height:44px;border-radius:10px;border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.04);color:#F5F7FA;padding:0 14px;font-size:14px;box-sizing:border-box">
+        </div>
+        <button type="button" style="height:46px;border:none;border-radius:10px;background:{{accent}};color:#FFFFFF;font-size:14px;font-weight:600;cursor:pointer;margin-top:6px">Sign in</button>
+      </form>
+      <p style="margin:28px 0 0;text-align:center;font-size:13px;color:#9CA3AF">Don't have an account? <a href="#" style="font-weight:500">Sign up</a></p>
+    </div>
+  </div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#0F766E"},"$preview":{"width":1280,"height":800}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#0F766E' };
+}
+}
+</script>
+</body>
+</html>
